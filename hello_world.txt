@@ -1,1 +1,3 @@
 Hello World!
+
+Completing the Git Basics lesson on The Odin Project!
