@@ -3,3 +3,5 @@ Hello World!
 This is a test
 
 This is a revert test
+
+This is a stash test
