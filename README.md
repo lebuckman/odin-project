@@ -1,7 +1,8 @@
 # git_test
 
-Hello Odin!
+Git Practice!
 
-Completing the Git Basics lesson on The Odin Project!
+Practicing the ways of Git!
 
 -   I am adding this line the from `more-learning` branch
+-   This is coming from `dev-liam`
