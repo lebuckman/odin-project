@@ -2,8 +2,4 @@
 
 Git Practice!
 
-Practicing the ways of Git!
-
--   I am adding this line the from `more-learning` branch
--   This is coming from `dev-liam`
--   This is from `dev-jsm`
+Learning how to merge with git!
