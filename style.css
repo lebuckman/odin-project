@@ -44,10 +44,10 @@ body {
     line-height: 1.5;
     font-family: "Roboto", sans-serif;
     color: #000;
-    background-color: #E2E8EF;
-    
-    display: flex;
-    flex-direction: column;
+    background-color: #e2e8ef;
+
+    display: grid;
+    grid-template-columns: 270px 1fr;
 }
 
 /* -------------------------- */
@@ -75,10 +75,63 @@ p {
     margin-top: var(--flow-space, 2rem);
 }
 
-
 /* ------------------- */
 /* Components          */
 /* ------------------- */
+
+/* Icons */
+
+.nav-icon {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.sidebar-header .nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1.5rem;
+    color: white;
+    background-color: #1992d4;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.sidebar-nav > ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav > ol > li a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
 
 /* ----------------------------- */
 /* Layout                        */
