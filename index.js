@@ -25,17 +25,56 @@ Book.prototype.info = function () {
  *************/
 
 const myLibrary = [];
+const libraryGrid = document.querySelector(".library-grid");
+const noBooksMsg = document.querySelector(".no-books-msg");
 
 function addBookToLibrary(title, author, pages, haveRead) {
     myLibrary.push(new Book(title, author, pages, haveRead));
 }
 
+function displayBooks(libraryArr) {
+    if (libraryArr.length === 0) {
+        noBooksMsg.classList.remove("hidden");
+    } else {
+        noBooksMsg.classList.add("hidden");
+    }
+
+    for (const book of libraryArr) {
+        const bookCard = document.createElement("div");
+        bookCard.classList.add("card");
+
+        const bookTitle = document.createElement("h2");
+        bookTitle.textContent = book.title;
+        bookTitle.classList.add("card-title");
+
+        const bookAuthor = document.createElement("p");
+        bookAuthor.textContent = `By: ${book.author}`;
+        bookAuthor.classList.add("card-author");
+
+        const bookDetails = document.createElement("p");
+        bookDetails.textContent = `${book.pages} pages, ${
+            book.haveRead ? "Completed" : "Not Read"
+        }`;
+        bookDetails.classList.add("card-details");
+
+        // Add card info to Book Card
+        bookCard.appendChild(bookTitle);
+        bookCard.appendChild(bookAuthor);
+        bookCard.appendChild(bookDetails);
+
+        // Add Book Card to Library Grid
+        libraryGrid.appendChild(bookCard);
+    }
+}
+
 /***********
- * TESTING *
+ * RUNNING *
  ***********/
 
-const theHobbit = addBookToLibrary("The Hobbit", "J.R.R Tolkien", 295, false);
-console.log(myLibrary);
-console.log(myLibrary[0].info());
+addBookToLibrary("The Hobbit", "J.R.R Tolkien", 300, false);
+addBookToLibrary("Frankenstein", "Mary Shelley", 352, true);
+addBookToLibrary("The Kite Runner", "Khaled Hosseini", 371, true);
+addBookToLibrary("Moby Dick", "Herman Melville", 635, false);
+addBookToLibrary("Slaughterhouse-Five", "Kurt Vonnegut Jr.", 224, true);
 
-
+displayBooks(myLibrary);
