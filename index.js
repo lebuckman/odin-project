@@ -20,6 +20,10 @@ Book.prototype.info = function () {
     }`;
 };
 
+Book.prototype.toggleRead = function () {
+    this.haveRead = !this.haveRead;
+};
+
 /* ========= */
 /* UTILITIES */
 /* ========= */
@@ -34,12 +38,16 @@ function addBookToLibrary(title, author, pages, haveRead) {
 }
 
 function removeBookFromLibrary(bookId) {
-    const bookIndex = myLibrary.findIndex((book) => book.id === bookId);
+    const bookIndex = getBookIndex(bookId);
 
     if (bookIndex !== -1) {
         myLibrary.splice(bookIndex, 1);
         renderLibrary();
     }
+}
+
+function getBookIndex(bookId) {
+    return myLibrary.findIndex((book) => book.id === bookId);
 }
 
 function renderLibrary() {
@@ -51,9 +59,8 @@ function renderLibrary() {
         const bookCard = document.createElement("div");
         bookCard.classList.add("card");
 
+        // Card Heading
         const bookCardHeading = document.createElement("div");
-        const bookCardFooter = document.createElement("div");
-        bookCardFooter.classList.add("card-footer");
 
         const bookTitle = document.createElement("h2");
         bookTitle.textContent = book.title;
@@ -66,22 +73,32 @@ function renderLibrary() {
         bookCardHeading.appendChild(bookTitle);
         bookCardHeading.appendChild(bookAuthor);
 
-        const bookDetails = document.createElement("p");
-        bookDetails.textContent = `${book.pages} pages, ${
-            book.haveRead ? "Completed ✔︎" : "Not Read ✖︎"
+        // Card Footer
+        const bookCardFooter = document.createElement("div");
+        bookCardFooter.classList.add("card-footer");
+        const bookCardFooterDetails = document.createElement("div");
+        bookCardFooterDetails.classList.add("card-footer-details");
+
+        const bookPages = document.createElement("p");
+        bookPages.textContent = `${book.pages} pages, `;
+        bookPages.classList.add("card-pages");
+
+        const readBookBtn = document.createElement("button");
+        readBookBtn.textContent = `${
+            book.haveRead ? "Read ✔︎" : "Not Read ✖︎"
         }`;
-        bookDetails.classList.add("card-details");
+        readBookBtn.classList.add("card-read-btn");
+        readBookBtn.classList.add(`${book.haveRead ? "read" : "not-read"}`);
 
         const delBookBtn = document.createElement("button");
         delBookBtn.textContent = "🗑️";
         delBookBtn.classList.add("card-del-btn");
 
-        bookCardFooter.appendChild(bookDetails);
-        bookCardFooter.appendChild(delBookBtn);
+        bookCardFooterDetails.append(bookPages, readBookBtn);
+        bookCardFooter.append(bookCardFooterDetails, delBookBtn);
 
         // Add card info to Book Card
-        bookCard.appendChild(bookCardHeading);
-        bookCard.appendChild(bookCardFooter);
+        bookCard.append(bookCardHeading, bookCardFooter);
         bookCard.dataset.bookId = book.id;
 
         // Add Book Card to Library Grid
@@ -90,11 +107,23 @@ function renderLibrary() {
 }
 
 libraryGrid.addEventListener("click", (e) => {
-    const removeBtn = e.target.closest(".card-del-btn");
-    if (!removeBtn) return;
+    const card = e.target.closest(".card");
+    if (!card) return;
 
-    const card = removeBtn.closest(".card");
-    removeBookFromLibrary(card.dataset.bookId);
+    const bookId = card.dataset.bookId;
+
+    // Delete book
+    if (e.target.closest(".card-del-btn")) {
+        removeBookFromLibrary(bookId);
+        return;
+    }
+
+    // Toggle read status
+    if (e.target.closest(".card-read-btn")) {
+        const bookIndex = getBookIndex(bookId);
+        myLibrary[bookIndex].toggleRead();
+        renderLibrary();
+    }
 });
 
 /* ======= */

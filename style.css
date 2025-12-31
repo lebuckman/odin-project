@@ -92,10 +92,29 @@ h1::before {
     font-weight: 500;
 }
 
-.card .card-details {
+.card .card-pages {
     color: lightgray;
     font-style: italic;
-    margin-top: 1rem;
+    display: inline;
+}
+
+.card .card-read-btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-style: italic;
+    color: lightgray;
+    background: none;
+    cursor: pointer;
+    transition: transform linear 0.1s;
+}
+
+.card .card-read-btn.read {
+    color: #f0b429;
+}
+
+.card .card-read-btn.not-read {
+    color: #91a4c8;
 }
 
 .card .card-del-btn {
@@ -115,6 +134,10 @@ h1::before {
     display: flex;
     justify-content: space-between;
     align-items: end;
+}
+
+.card .card-footer-details {
+    margin-top: 1rem;
 }
 
 .no-books-msg.hidden {
