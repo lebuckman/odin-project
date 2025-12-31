@@ -32,6 +32,15 @@ function addBookToLibrary(title, author, pages, haveRead) {
     myLibrary.push(new Book(title, author, pages, haveRead));
 }
 
+function removeBookFromLibrary(bookId) {
+    const bookIndex = myLibrary.findIndex((book) => book.id === bookId);
+
+    if (bookIndex !== -1) {
+        myLibrary.splice(bookIndex, 1);
+        displayBooks(myLibrary);
+    }
+}
+
 function displayBooks(libraryArr) {
     libraryGrid.innerHTML = "";
 
@@ -75,11 +84,20 @@ function displayBooks(libraryArr) {
         // Add card info to Book Card
         bookCard.appendChild(bookCardHeading);
         bookCard.appendChild(bookCardFooter);
+        bookCard.dataset.bookId = book.id;
 
         // Add Book Card to Library Grid
         libraryGrid.appendChild(bookCard);
     }
 }
+
+libraryGrid.addEventListener("click", (e) => {
+    const removeBtn = e.target.closest(".card-del-btn");
+    if (!removeBtn) return;
+
+    const card = removeBtn.closest(".card");
+    removeBookFromLibrary(card.dataset.bookId);
+});
 
 /* ======= */
 /* RUN APP */
