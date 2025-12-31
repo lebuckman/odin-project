@@ -45,6 +45,8 @@ function displayBooks(libraryArr) {
         const bookCard = document.createElement("div");
         bookCard.classList.add("card");
 
+        const bookCardHeading = document.createElement("div");
+
         const bookTitle = document.createElement("h2");
         bookTitle.textContent = book.title;
         bookTitle.classList.add("card-title");
@@ -53,6 +55,9 @@ function displayBooks(libraryArr) {
         bookAuthor.textContent = `By: ${book.author}`;
         bookAuthor.classList.add("card-author");
 
+        bookCardHeading.appendChild(bookTitle);
+        bookCardHeading.appendChild(bookAuthor);
+
         const bookDetails = document.createElement("p");
         bookDetails.textContent = `${book.pages} pages, ${
             book.haveRead ? "Completed ✔︎" : "Not Read ✖︎"
@@ -60,8 +65,7 @@ function displayBooks(libraryArr) {
         bookDetails.classList.add("card-details");
 
         // Add card info to Book Card
-        bookCard.appendChild(bookTitle);
-        bookCard.appendChild(bookAuthor);
+        bookCard.appendChild(bookCardHeading);
         bookCard.appendChild(bookDetails);
 
         // Add Book Card to Library Grid
