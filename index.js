@@ -53,7 +53,7 @@ function displayBooks(libraryArr) {
 
         const bookDetails = document.createElement("p");
         bookDetails.textContent = `${book.pages} pages, ${
-            book.haveRead ? "Completed" : "Not Read"
+            book.haveRead ? "Completed ✔︎" : "Not Read ✖︎"
         }`;
         bookDetails.classList.add("card-details");
 
