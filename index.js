@@ -30,6 +30,7 @@ const noBooksMsg = document.querySelector(".no-books-msg");
 
 function addBookToLibrary(title, author, pages, haveRead) {
     myLibrary.push(new Book(title, author, pages, haveRead));
+    renderLibrary();
 }
 
 function removeBookFromLibrary(bookId) {
@@ -37,20 +38,16 @@ function removeBookFromLibrary(bookId) {
 
     if (bookIndex !== -1) {
         myLibrary.splice(bookIndex, 1);
-        displayBooks(myLibrary);
+        renderLibrary();
     }
 }
 
-function displayBooks(libraryArr) {
+function renderLibrary() {
     libraryGrid.innerHTML = "";
 
-    if (libraryArr.length === 0) {
-        noBooksMsg.classList.remove("hidden");
-    } else {
-        noBooksMsg.classList.add("hidden");
-    }
+    noBooksMsg.classList.toggle("hidden", myLibrary.length !== 0);
 
-    for (const book of libraryArr) {
+    for (const book of myLibrary) {
         const bookCard = document.createElement("div");
         bookCard.classList.add("card");
 
@@ -74,6 +71,7 @@ function displayBooks(libraryArr) {
             book.haveRead ? "Completed ✔︎" : "Not Read ✖︎"
         }`;
         bookDetails.classList.add("card-details");
+
         const delBookBtn = document.createElement("button");
         delBookBtn.textContent = "🗑️";
         delBookBtn.classList.add("card-del-btn");
@@ -109,7 +107,7 @@ addBookToLibrary("The Kite Runner", "Khaled Hosseini", 371, true);
 addBookToLibrary("Moby Dick", "Herman Melville", 635, false);
 addBookToLibrary("Slaughterhouse-Five", "Kurt Vonnegut Jr.", 224, true);
 
-displayBooks(myLibrary);
+renderLibrary();
 
 /* ============= */
 /* DIALOG + FORM */
@@ -139,7 +137,6 @@ dialogForm.addEventListener("submit", (e) => {
     const haveRead = formData.get("haveRead") === "on";
 
     addBookToLibrary(title, author, pages, haveRead);
-    displayBooks(myLibrary);
 
     dialogForm.reset();
     bookDialog.close();
