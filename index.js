@@ -46,6 +46,8 @@ function displayBooks(libraryArr) {
         bookCard.classList.add("card");
 
         const bookCardHeading = document.createElement("div");
+        const bookCardFooter = document.createElement("div");
+        bookCardFooter.classList.add("card-footer");
 
         const bookTitle = document.createElement("h2");
         bookTitle.textContent = book.title;
@@ -63,10 +65,16 @@ function displayBooks(libraryArr) {
             book.haveRead ? "Completed ✔︎" : "Not Read ✖︎"
         }`;
         bookDetails.classList.add("card-details");
+        const delBookBtn = document.createElement("button");
+        delBookBtn.textContent = "🗑️";
+        delBookBtn.classList.add("card-del-btn");
+
+        bookCardFooter.appendChild(bookDetails);
+        bookCardFooter.appendChild(delBookBtn);
 
         // Add card info to Book Card
         bookCard.appendChild(bookCardHeading);
-        bookCard.appendChild(bookDetails);
+        bookCard.appendChild(bookCardFooter);
 
         // Add Book Card to Library Grid
         libraryGrid.appendChild(bookCard);
