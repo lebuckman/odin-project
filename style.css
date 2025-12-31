@@ -56,25 +56,6 @@ h1::before {
     margin-right: 0.5rem;
 }
 
-.add-book-btn {
-    all: unset;
-    padding: 0.85rem 2.125rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    border-radius: 8px;
-    background-color: #0f3888;
-    cursor: pointer;
-}
-
-.add-book-btn::after {
-    content: "+";
-    margin-left: 0.5rem;
-}
-
-.add-book-btn:hover {
-    filter: brightness(1.1);
-}
-
 /* Library */
 
 .container {
@@ -116,4 +97,127 @@ h1::before {
 
 .no-books-msg.hidden {
     display: none;
+}
+
+/* Book Dialog */
+
+::backdrop {
+    background: #13171f;
+    opacity: 0.5;
+}
+
+::placeholder {
+    color: #91a4c8;
+}
+
+.show-dialog-btn {
+    all: unset;
+    padding: 0.85rem 2.125rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #0f3888;
+    cursor: pointer;
+}
+
+.show-dialog-btn::after {
+    content: "+";
+    margin-left: 0.5rem;
+}
+
+.show-dialog-btn:hover {
+    filter: brightness(1.1);
+}
+
+.book-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-inline: auto;
+    padding: 2rem 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #0a2760;
+}
+
+.book-dialog h2 {
+    font-size: 1.65rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f0b429;
+}
+
+.book-dialog form label {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #f0b429;
+}
+
+.book-dialog form label[for="haveRead"] {
+    display: inline-block;
+}
+
+.book-dialog form input {
+    display: block;
+    margin-block: 2px 15px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f3888;
+}
+
+/* Remove Spinner Arrows for Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Remove Spinner Arrows for other browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.book-dialog form input[type="checkbox"] {
+    display: inline;
+    margin-left: 10px;
+    transform: scale(1.2);
+    accent-color: #f0b429;
+}
+
+.book-dialog form .form-btns {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.book-dialog form .form-btns button {
+    width: 100%;
+    padding: 8px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-dialog form .form-btns button:hover {
+    filter: brightness(1.1);
+}
+
+.book-dialog form .form-btns .add-btn {
+    background-color: #f0b429;
+}
+
+.book-dialog form .form-btns .cancel-btn {
+    background-color: #0f3888;
+}
+
+/* ------------- */
+/* a11y          */
+/* ------------- */
+
+:focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
 }
