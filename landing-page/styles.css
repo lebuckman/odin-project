@@ -1,0 +1,261 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+	--clr-dark: #1F2937;
+	--clr-light: #F9FAF8;
+	--clr-gray: #6D747D;
+	--clr-light-gray: #E5E7EB;
+	--clr-accent: #3882F6;
+
+	--ff-primary: 'Roboto', sans-serif;
+
+	--fs-400: 18px;
+	--fs-500: 24px;
+	--fs-800: 36px;
+	--fs-900: 48px;
+}
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+picture,
+blockquote {
+    margin: 0; 
+}
+
+/* remove default bold styling */
+h1,
+h2,
+h3,
+p {
+    font-weight: 400;
+}
+
+/* remove default ul styling */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* set up the body */
+body {
+	line-height: 1.5;
+	font-family: var(--ff-primary);
+    display: flex;
+	flex-direction: column;
+}
+
+/* make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+.cta-btn {
+	padding: 4px 30px;
+	font-weight: 600;
+	border: 2px solid var(--clr-light);
+	border-radius: 5px;
+}
+
+/* header */
+
+header {
+	color: var(--clr-light);
+	background-color: var(--clr-dark);
+}
+
+/* hero section */
+
+#hero {
+	display: flex;
+	align-items: center;
+	gap: 5em;
+	margin: 5em;
+}
+
+#hero h1 {
+	font-weight: 900;
+	font-size: var(--fs-900);
+}
+
+#hero img {
+	width: 400px;
+	border-radius: 10px;
+}
+
+#hero p {
+	font-size: var(--fs-400);
+	color: var(--clr-gray);
+}
+
+#hero .cta-btn {
+	margin-top: 20px;
+	border-color: var(--clr-accent);
+	color: var(--clr-light);
+	background-color: var(--clr-accent);
+}
+
+#hero .cta-btn:hover {
+	cursor: pointer;
+	color: var(--clr-accent);
+	border-color: var(--clr-light);
+	background-color: var(--clr-light);
+}
+
+/* primary navigation */
+
+.primary-nav {
+	display: flex;
+	justify-content: space-between;
+	padding-block: 1em;
+	margin-inline: 5em;
+}
+
+.primary-nav ul {
+	display: flex;
+	gap: 20px;
+}
+
+.primary-nav a {
+	text-decoration: none;
+	font-size: var(--fs-400);
+	color: var(--clr-gray);
+}
+
+.primary-nav a:hover {
+	cursor: pointer;
+	color: var(--clr-light);
+}
+
+.header-logo {
+	font-size: var(--fs-500);
+}
+
+/* random information section */
+
+.random-info {
+	text-align: center;
+	margin-block: 5em;
+}
+
+.random-info h2 {
+	margin-bottom: .5em;
+	font-weight: 900;
+	font-size: var(--fs-800);
+}
+
+.random-cards {
+	display: flex;
+	justify-content: center;
+	gap: 4em;
+}
+
+.random-cards article {
+	width: 150px;
+	color: var(--clr-gray);
+	line-height: 1.2;
+}
+
+.random-cards img {
+	margin-block: 8px;
+	border: 5px solid var(--clr-accent);
+	border-radius: 15px;
+}
+
+/* quote section */
+
+.home-quote {
+	display: flex;
+	flex-direction: column;
+	padding: 5em 10em;
+	background-color: var(--clr-light-gray)
+}
+
+.home-quote blockquote {
+	line-height: 1.2;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: var(--fs-800);
+}
+
+.home-quote p {
+	align-self: flex-end;
+	font-weight: 600;
+}
+
+/* cta */
+
+.cta {
+	margin: 5em;
+}
+
+.cta-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-block: 2em;
+	border-radius: 5px;
+	color: var(--clr-light);
+	background-color: var(--clr-accent);
+}
+
+.cta-container h3 {
+	font-weight: 600;
+}
+
+.cta-container p { 
+	font-size: var(--fs-400);
+	color: var(--clr-light-gray);
+}
+
+.cta .cta-btn {
+	color: var(--clr-light);
+	background-color: var(--clr-accent);
+}
+
+.cta .cta-btn:hover {
+	cursor: pointer;
+	color: var(--clr-accent);
+	background-color: var(--clr-light);
+}
+
+/* footer */
+
+footer {
+	text-align: center;
+	padding-block: 2em;
+	color: var(--clr-light);
+	background-color: var(--clr-dark);
+}
