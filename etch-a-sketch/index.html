@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Etch-a-Sketch | TOP</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<h1 id="header">Etch-a-Sketch</h1>
+
+	<div id="size-form">
+		<label for="size-input">New grid size:</label>
+		<input type="text" name="size-input" id="size-input">
+		<p id="copy-input"></p>
+		<button id="size-submit">Submit</button>
+		<p id="size-prompt"></p>
+	</div>
+
+	<div class="color-btns">
+		<form class="color-btns-container">
+			<label><input type="radio" name="pen" value="black-pen" id="black-pen" checked>Black</label>
+			<label><input type="radio" name="pen" value="red-pen" id="red-pen">Red</label>
+			<label><input type="radio" name="pen" value="blue-pen" id="blue-pen">Blue</label>
+			<label><input type="radio" name="pen" value="random-pen" id="random-pen">Random</label>
+			<label><input type="radio" name="pen" value="eraser-pen" id="eraser-pen">Eraser</label>
+		</form>
+		<button id="reset-btn">Reset</button>
+	</div>
+
+	<div class="canvas">
+		<div class="container">
+			
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap");
+
+:root {
+    --clr-btn: hsl(48, 100%, 93%);
+    --clr-prompt: hsl(35, 83%, 50%);
+    --clr-input-border: hsl(0, 1%, 27%);
+    --clr-grid-border: hsl(0, 4%, 57%);
+    --clr-box-border: hsl(0, 14%, 95%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: Exo, sans-serif;
+    background: linear-gradient(#f3f1f1, #b8b5b5);
+}
+
+html,
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+button {
+    padding: 2px 6px;
+    border: 2px solid var(--clr-input-border);
+    border-radius: 4px;
+    font: inherit;
+    background-color: var(--clr-btn);
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
+#header {
+    text-align: center;
+    padding-top: 2em;
+}
+
+#size-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 1em 1.9em;
+}
+
+#size-input {
+    width: 40px;
+    margin-inline: 8px;
+    text-align: center;
+    border: 2px solid var(--clr-input-border);
+    border-radius: 4px;
+    font: inherit;
+}
+
+#copy-input {
+    margin-right: 10px;
+}
+
+#size-prompt {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9rem;
+    color: var(--clr-prompt);
+}
+
+.color-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-block: 15px;
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 15px solid var(--clr-grid-border);
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.column {
+    border: 1px solid var(--clr-box-border);
+    flex: 1;
+}
