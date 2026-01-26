@@ -1,0 +1,75 @@
+/* 
+Free Font Distributor: free fonts, may have license conditions like crediting 
+- Font Squirrel, DaFont, Everything Fonts...
+- conditions included in a file when downloadedtr
+
+Paid Font Distributor: fonts available for charge
+- fonts.com, myfonts.com; Linotype, Monotype, Exljbris...
+
+Online Font Service: stores and serves fonts for you
+- Google Fonts (free), Adobe Fonts, Cloud.typography
+*/
+
+/* 
+.tff - True Type Fonts
+.otf - Open Type Fonts
+*/
+
+/* Copy paste from stylesheet.css provided by transfonter 
+	https://transfonter.org/
+*/
+
+@font-face {
+    font-family: "ArmWrestler";
+    src: url("/transfonter/") format("woff2"),
+        url("/transfonter/ArmWrestler-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Aleo";
+    src: url("/transfonter/Aleo-Regular.woff2") format("woff2"),
+        url("/transfonter/Aleo-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 10px;
+    margin: 0;
+    font-family: "ArmWrestler", sans-serif;
+}
+
+body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-family: "Aleo", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    word-spacing: 0.6rem;
+}
+
+h2.google-font {
+    font-family: "Fascinate", system-ui;
+}
+
+p.google-font {
+    font-family: "Modak", system-ui;
+}
