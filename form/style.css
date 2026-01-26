@@ -1,0 +1,255 @@
+@font-face {
+    font-family: "Norse";
+    src: url("/assets/fonts/Norse-Bold.woff2") format("woff2"),
+        url("/assets/fonts/Norse-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    --bg-dark: oklch(98% 0% 243deg);
+    --bg: oklch(100% 0% 90deg);
+    --bg-accent: oklch(51% 15% 131deg);
+
+    --focus: oklch(53% 47% 266deg);
+    --warning: oklch(58% 40% 25deg);
+
+    --text: oklch(0% 0% 0deg);
+    --text-accent: oklch(28% 7% 257deg);
+    --text-white: oklch(100% 0% 90deg);
+
+    --border: oklch(93% 1% 265deg);
+    --shadow: 0px 0px 5px oklch(0 0 0 / 0.07), 0px 0px 5px oklch(0 0 0 / 0.15);
+
+    --ff: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    --spacing: 3rem;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset default spacing and inheritance */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+:focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+}
+
+/* Remove list styles */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Alter media defaults */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff);
+    color: var(--text);
+    background-color: var(--bg-dark);
+}
+
+/* -------------------------- */
+/* Typography and Utilities   */
+/* ---------------------------*/
+
+p {
+    overflow-wrap: break-word;
+    max-width: 66ch;
+    text-wrap: pretty;
+    margin-block: 10px;
+}
+
+.container {
+    max-width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    padding-inline: var(--spacing);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+    background: url("./assets/background.jpg");
+    background-size: cover;
+
+    position: relative;
+}
+
+.sign-up {
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* sign up */
+
+.description {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.description:last-of-type {
+    margin-top: 25px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.cta-btn {
+    cursor: pointer;
+    padding: 0.5em 3em;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--bg-accent);
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+}
+
+.cta-btn:hover,
+.cta-btn:focus-visible,
+a:hover,
+a:focus-visible {
+    filter: brightness(120%);
+}
+
+.cta a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--bg-accent);
+}
+
+.form-container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-container {
+    padding: var(--spacing) 4rem;
+    margin-block: var(--spacing);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-accent);
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.form-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80%;
+    padding: 1em;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: var(--focus);
+}
+
+input:user-invalid {
+    border-color: var(--warning);
+}
+
+/* sidebar */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-block: 2rem 1rem;
+    margin-top: 15rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.odin-logo {
+    width: 100px;
+    align-self: flex-start;
+}
+
+.odin-logo + span {
+    font-size: 7.5rem;
+    color: var(--text-white);
+    font-family: "Norse", serif;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+}

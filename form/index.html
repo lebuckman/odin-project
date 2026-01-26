@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TOP | Sign-Up Form</title>
+        <link rel="icon" type="image/svg+xml" href="./assets/leaf-icon.svg" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <section class="sidebar">
+                <div class="logo">
+                    <img
+                        class="odin-logo"
+                        src="./assets/odin-logo.png"
+                        alt=""
+                    />
+                    <span>Odin</span>
+                </div>
+
+                <p class="photo-credit">
+                    Photo by
+                    <a
+                        href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                        >Halie West</a
+                    >
+                    on
+                    <a
+                        href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+                        >Unsplash</a
+                    >
+                </p>
+            </section>
+
+            <section class="sign-up">
+                <div class="container">
+                    <p class="description">
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams.
+                        <br />
+                        Sign up <span class="italic">now</span> to get started.
+                    </p>
+                    <p class="description">
+                        You <span class="italic">know</span> you want to.
+                    </p>
+                </div>
+
+                <form action="">
+                    <div class="form-container flow">
+                        <h1>Let's do this!</h1>
+                        <ul role="list">
+                            <li>
+                                <label for="first-name" class="uppercase"
+                                    >First Name</label
+                                >
+                                <input
+                                    type="text"
+                                    name="first-name"
+                                    id="first-name"
+                                    placeholder="John"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="last-name" class="uppercase"
+                                    >Last Name</label
+                                >
+                                <input
+                                    type="text"
+                                    name="last-name"
+                                    id="last-name"
+                                    placeholder="Doe"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="email" class="uppercase"
+                                    >Email</label
+                                >
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="johndoe@example.com"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="phone" class="uppercase"
+                                    >Phone Number</label
+                                >
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="(XXX)XXX-XXX"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="password" class="uppercase"
+                                    >Password</label
+                                >
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="Enter password"
+                                    required
+                                />
+                            </li>
+                            <li>
+                                <label for="password-confirm" class="uppercase"
+                                    >Confirm Password</label
+                                >
+                                <input
+                                    type="password"
+                                    name="password-confirm"
+                                    id="password-confirm"
+                                    placeholder="Confirm password"
+                                    required
+                                />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cta container">
+                        <button class="cta-btn">Create Account</button>
+                        <p>Already have an account? <a href="#">Log in</a></p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>
