@@ -1,0 +1,46 @@
+:root {
+	--clr-black: hsl(221deg 20% 8%);
+	--clr-white: hsl(221deg 20% 100%);
+	--clr-accent: hsl(221deg 20% 60%);
+}
+
+body {
+	padding: 3em;
+	background-color: var(--clr-black);
+	color: var(--clr-white);
+}
+
+figure {
+	margin: 3em 0;
+}
+
+figcaption {
+	font-size: .85rem;
+	width: 60ch;
+}
+
+ol li {
+	margin-block: .75em;
+}
+
+a {
+	color: var(--clr-accent);
+}
+
+a:hover {
+	cursor: pointer;
+	color: var(--clr-white);
+}
+
+#landing-page {
+	text-align: center;
+}
+
+.recipes li {
+	list-style: none;
+	line-height: 2;
+}
+
+ul.recipes {
+	padding-left: 0;
+}
