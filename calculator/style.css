@@ -1,0 +1,119 @@
+:root {
+    --bg-dark: hsl(30 0% 12%);
+    --bg: hsl(221 9% 17%);
+    --bg-light: hsl(221 5% 33%);
+    --text: hsl(0 0% 95%);
+    --highlight: hsl(218 3% 45%);
+    --accent: hsl(35 100% 50%);
+    --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07),
+        0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    width: 60px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    font: inherit;
+    color: inherit;
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow);
+}
+
+button:hover {
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 13px;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 25px 25px;
+}
+
+.equals {
+    grid-column: span 2;
+    width: 100%;
+    aspect-ratio: auto;
+    border-radius: 25px;
+}
+
+.operation,
+.equals {
+    background-color: var(--accent);
+}
+
+.highlight {
+    background-color: var(--highlight);
+}
+
+.output {
+    margin: 70px 30px 0;
+    text-align: right;
+    position: relative;
+}
+
+#currentNumber {
+    font-size: 2.7rem;
+    height: 65px;
+}
+
+#previousNumber {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 1.4rem;
+    color: var(--highlight);
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 23px;
+}
