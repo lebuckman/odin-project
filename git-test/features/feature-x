@@ -1,0 +1,6 @@
+This is feature x in branch feature/x
+
+this will spark a conflict this time - HEAD
+add a conflict here - feature/y branch
+
+feature x commit
