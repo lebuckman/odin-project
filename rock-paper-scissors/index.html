@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="icon" href="./images/rps-icon.png" type="image/png">
+	<title>Rock Paper Scissors | T.O.P.</title>
+
+	<!-- Google Fonts -->
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<section class="heading">
+			<h1>Rock Paper Scissors</h1>
+			<h2>Choose your hand...</h2>
+		</section>
+	
+		<section class="player-options">
+			<button id="Rock"><img src="./images/rocks.png" alt="Rock"></button>
+			<button id="Paper"><img src="./images/paper.png" alt="Paper"></button>
+			<button id="Scissors"><img src="./images/scissors.png" alt="Scissors"></button>
+		</section>
+	
+		<section class="scoring">
+			<p class="result-msg"></p>
+			<p class="your-score"></p>
+			<p class="opponent-score"></p>
+		</section>
+		
+		<p class="instructions">First to 5 points win!</p>
+	</div>
+
+	<div class="end-game-banner hidden">
+		<h2 class="final-msg"></h2>
+		<button class="reset-btn">Play again?</button>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+</html>
