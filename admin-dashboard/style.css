@@ -1,0 +1,396 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset default spacing and inheritance */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+/* Remove list styles */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Alter media defaults */
+img,
+picture,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Add width/height to HTML tag */
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100svh;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    background-color: #e2e8ef;
+
+    display: grid;
+    grid-template-columns: 270px 1fr;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------- */
+/* Typography and Utilities   */
+/* ---------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    text-wrap: balance;
+}
+
+p {
+    overflow-wrap: break-word;
+    max-width: 66ch;
+    text-wrap: pretty;
+    margin-block: 10px;
+}
+
+/* ------------------- */
+/* Components          */
+/* ------------------- */
+
+/* Icons */
+
+.nav-icon {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.sidebar-header .nav-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+.notifications-icon,
+.cta-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e2e8ef;
+    padding: 4px;
+}
+
+.welcome-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e2e8ef;
+    padding: 8px;
+}
+
+.trending-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1.5rem;
+    color: white;
+    background-color: #1992d4;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.sidebar-nav > ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav > ol > li a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+/* Search + User Section */
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+}
+
+.search {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #e2e8ef;
+}
+
+.notifications-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+/* Welcome Section */
+
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem 3rem 2rem;
+    background-color: #fff;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.welcome-text p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.welcome-text p:last-child {
+    font-size: 1.5rem;
+}
+
+.welcome-ctas {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.welcome-ctas button {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 24px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #1992d4;
+    cursor: pointer;
+}
+
+/* Main Content */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.content-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.section-title {
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+/* Projects */
+
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+	gap: 1.5rem;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
+	border-radius: 8px;
+	border-left: 6px solid #F0B429;
+	background-color: white;
+}
+
+.project-content {
+	flex: 1;
+}
+
+.project-title {
+	font-size: 1.4rem;
+	font-weight: 500;;
+}
+
+.project-description {
+	margin: 0;
+	color: #636363;
+}
+
+.project-ctas {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+/* Announcements */
+
+.announcements-card {
+	padding: 2rem;
+	border-radius: 8px;
+	background-color: white;
+}
+
+.announcements-item h4 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.announcements-item p {
+	font-size: 0.75rem;
+	color: #636363;
+	margin: 0;
+}
+
+.divider {
+	height: 1px;
+	background-color: #e0e0e0;
+	margin: 1rem 0;
+}
+
+/* Trending */
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+	border-radius: 8px;
+    background-color: white;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trending-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-username {
+	margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.trending-project {
+	margin: 0;
+    font-size: 1rem;
+    color: #636363;
+}
+
+
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */

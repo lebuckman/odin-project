@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TOP | Admin Dashboard</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Sidebar Column -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="icons/dashboard.svg" class="nav-icon" alt="" />
+                <h1>Dashboard</h1>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ol role="list">
+                    <li>
+                        <a href="#">
+                            <img src="icons/home.svg" class="nav-icon" alt="" />
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/profile.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/messages.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Messages</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/history.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            History</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/tasks.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Tasks</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/communities.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Communities</a
+                        >
+                    </li>
+                </ol>
+                <ol role="list">
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/settings.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Settings</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/support.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Support</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="icons/privacy.svg"
+                                class="nav-icon"
+                                alt=""
+                            />
+                            Privacy</a
+                        >
+                    </li>
+                </ol>
+            </nav>
+        </aside>
+
+        <!-- Main Content Column -->
+        <main>
+            <!-- Top Nav -->
+            <header class="top-nav">
+                <!-- Search -->
+                <div class="search">
+                    <img src="/icons//search.svg" class="search-icon" alt="" />
+                    <input
+                        type="search"
+                        class="search-input"
+                        placeholder="Search"
+                    />
+                </div>
+
+                <!-- User -->
+                <div class="user">
+                    <button class="notifications-btn">
+                        <img
+                            src="icons/notifications.svg"
+                            class="notifications-icon"
+                            alt="notifications"
+                        />
+                    </button>
+                    <div class="user-profile">
+                        <img
+                            src="icons/avatar.svg"
+                            class="user-icon"
+                            alt="user avatar"
+                        />
+                        <span class="user-name">Morgan Oakley</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Top Welcome -->
+            <section class="welcome-section">
+                <div class="welcome">
+                    <img src="icons/avatar.svg" class="welcome-icon" alt="" />
+                    <div class="welcome-text">
+                        <p>Hi there,</p>
+                        <p>Morgan Oakley (@morgan)</p>
+                    </div>
+                </div>
+
+                <div class="welcome-ctas">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Projects -->
+                <section class="projects">
+                    <h2 class="section-title">Your Projects</h2>
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Super Cool Project
+                                </h3>
+                                <p class="project-description">
+                                    Sed tempus ut lacus ut scelerisque.
+                                    Suspendisse sollicitudin nibh erat, id
+                                    facilisis felis accumsan nec.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                        <!-- Project Card 2 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Less Cool Project</h3>
+                                <p class="project-description">
+                                    Nullam condimentum ipsum ut lectus vehicula
+                                    consectetur. Quisque sed dolor tincidunt,
+                                    consectetur sapien et, facilisis dolor. Duis
+                                    sem purus, dignissim ut sapien in, varius
+                                    pellentesque lacus.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                        <!-- Project Card 3 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Impossible App</h3>
+                                <p class="project-description">
+                                    In hac habitasse platea dictumst. Vivamus
+                                    dictum rutrum arcu, a placerat velit
+                                    sagittis id.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                        <!-- Project Card 4 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Easy Peasy App</h3>
+                                <p class="project-description">
+                                    Etiam cursus eros ac efficitur fringilla.
+                                    Vestibulum dignissim urna eget accumsan
+                                    aliquam. Curabitur dignissim nisi in tortor
+                                    commodo, ac bibendum magna tincidunt.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                        <!-- Project Card 5 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Ad Blockers</h3>
+                                <p class="project-description">
+                                    Quisque eget rutrum nisl. Nam augue justo,
+                                    cursus vitae metus vel, pharetra hendrerit
+                                    felis. Aliquam sed malesuada eros.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                        <!-- Project Card 6 -->
+                        <article class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Money Maker</h3>
+                                <p class="project-description">
+                                    Praesent convallis, libero quis congue
+                                    elementum, nunc ante faucibus sapien, ac
+                                    scelerisque tortor purus sit amet ex.
+                                    Pellentesque mollis nec sem vel aliquam.
+                                </p>
+                            </div>
+                            <div class="project-ctas">
+                                <button class="icon-btn" aria-label="Favorite">
+                                    <img
+                                        src="icons/star.svg"
+                                        alt="Favorite"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Watch">
+                                    <img
+                                        src="icons/eye.svg"
+                                        alt="Watch"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                                <button class="icon-btn" aria-label="Share">
+                                    <img
+                                        src="icons/share.svg"
+                                        alt="Share"
+                                        class="cta-icon"
+                                    />
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Sidebar Grid -->
+                <aside class="content-sidebar">
+                    <!-- Announcements -->
+                    <section class="announcements">
+                        <h2 class="section-title">Announcements</h2>
+                        <!-- Announcement 1 -->
+                        <div class="announcements-card">
+                            <article class="announcements-item">
+                                <h4>Site Maintenance</h4>
+                                <p>
+                                    Vestibulum condimentum tellus lacus, in
+                                    accumsan elit maximus ac. Donec hendrerit
+                                    sodales congue...
+                                </p>
+                            </article>
+
+                            <div class="divider"></div>
+
+                            <!-- Announcement 2 -->
+                            <article class="announcements-item">
+                                <h4>Community Share Day</h4>
+                                <p>
+                                    Nam vel lectus tincidunt, rutrum nulla eu,
+                                    ornare libero. Aliquam dictum accumsan
+                                    porttitor...
+                                </p>
+                            </article>
+
+                            <div class="divider"></div>
+
+                            <!-- Announcement 3 -->
+                            <article class="announcements-item">
+                                <h4>Updated Privacy Policy</h4>
+                                <p>
+                                    Phasellus efficitur nisi eget elit
+                                    consectetur, eget condimentum ante auctor.
+                                    Cras fringilla sagittis sem in mattis...
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Trending -->
+                    <section class="trending">
+                        <h3 class="section-title">Trending</h3>
+                        <div class="trending-card">
+                            <article class="trending-item">
+                                <img
+                                    src="icons/avatar.svg"
+                                    alt=""
+                                    class="trending-avatar"
+                                />
+                                <div class="trending-info">
+                                    <p class="trending-username">@tegan</p>
+                                    <p class="trending-project">
+                                        World Peace Builder
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="trending-item">
+                                <img
+                                    src="icons/avatar.svg"
+                                    alt=""
+                                    class="trending-avatar"
+                                />
+                                <div class="trending-info">
+                                    <p class="trending-username">@morgan</p>
+                                    <p class="trending-project">
+                                        Super Cool Project
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="trending-item">
+                                <img
+                                    src="icons/avatar.svg"
+                                    alt=""
+                                    class="trending-avatar"
+                                />
+                                <div class="trending-info">
+                                    <p class="trending-username">@kendall</p>
+                                    <p class="trending-project">
+                                        Life Changing App
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="trending-item">
+                                <img
+                                    src="icons/avatar.svg"
+                                    alt=""
+                                    class="trending-avatar"
+                                />
+                                <div class="trending-info">
+                                    <p class="trending-username">@alex</p>
+                                    <p class="trending-project">
+                                        No Traffic Maker
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </body>
+</html>
