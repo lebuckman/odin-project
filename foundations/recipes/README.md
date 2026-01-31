@@ -1,5 +1,7 @@
-# Odin-recipes
+# Odin Recipes
 
-This is the first project for The Odin Project.
+First project of The Odin Project.
 
-This project will use the HTML skills explained so far in this HTML section within the Foundations course.
+This project applies the HTML skills explained so far within the Foundations course. Basic CSS is applied slightly later.
+
+![Preview of a recipe page](./recipes-preview.png)

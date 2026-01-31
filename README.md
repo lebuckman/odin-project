@@ -1,12 +1,12 @@
 # The Odin Project
 
-A collection of exercises, practice, and projects from The Odin Project curriculum, located in a single repo to easily reference and document my progress.
+A collection of exercises, practice, and projects from The Odin Project curriculum, located in a single repo to easily reference and document my progress. Find additional README documentation inside each directory.
 
 ## 📂 Repo Structure
 
 ```
 odin-project/
-├── exercises/
+├── exercises/               # forked repos
 │   ├── css-exercises/
 │   └── js-exercises/
 │
@@ -33,5 +33,4 @@ odin-project/
 - [x] Intermediate HTML & CSS
 - [ ] JavaScript Path
 - [ ] React
-
-**_TBA_**
+- [ ] ...
