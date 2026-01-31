@@ -2,6 +2,8 @@
 
 A calculator that handles basic arithmetic.
 
+Learn more about this project in [TOP's Foundation Course: JavaScript Basics](https://www.theodinproject.com/lessons/foundations-calculator).
+
 ## Notes
 
 **Notable project change**:

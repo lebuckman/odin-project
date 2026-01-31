@@ -6,9 +6,13 @@ A basic rock-paper-scissors game in which the user plays against the computer.
 
 This is the first JavaScript project in T.O.P.'s Foundations course, in which the main task is to create the game **_Rock Paper Scissors_**. This game will be played entirely in the console, and assumes that user input is correct (although input is not case-sensitive).
 
+Learn more about this project in [TOP's Foundation Course: JavaScript Basics](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
+
 ## v2.0.0
 
 Revisiting this project after learning about DOM manipulation, the main task of this version is to implement a user interface.
+
+Learn more about this project in [TOP's Foundation Course: JavaScript Basics](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors).
 
 ## v3.0.0
 

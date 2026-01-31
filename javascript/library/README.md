@@ -1,6 +1,8 @@
 # Odin Library
 
-A simple mini Library app that supplements learning about JavaScript objects, object constructors, and the `[[Prototype]]`. Learn more about the project in [TOP's JavaScript Course](https://www.theodinproject.com/lessons/node-path-javascript-library).
+A simple mini Library app that supplements learning about JavaScript objects, object constructors, and the `[[Prototype]]`.
+
+Learn more about the project in [TOP's JavaScript Course: Organizing Your JavaScript Code](https://www.theodinproject.com/lessons/node-path-javascript-library).
 
 **Additional Misc. Topics Reviewed:**
 

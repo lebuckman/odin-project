@@ -1,6 +1,8 @@
 # Sign-up Form
 
-Intermediate HTML and CSS Course Project. View the [Project Instructions](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
+Intermediate HTML and CSS Course Project.
+
+Learn more about this project in [TOP's Intermediate HTML and CSS Course: Forms](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 
 ## Future learning points
 
